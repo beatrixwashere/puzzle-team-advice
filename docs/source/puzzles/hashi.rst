@@ -72,8 +72,7 @@ Another type of logic to watch out for is connectivity. All islands in a puzzle 
 we can disregard any placements that would isolate any group of islands. 1 islands are often involved in this kind of logic,
 since they can create "dead ends" that will not connect any further to the rest of the puzzle. What this means in practice is
 if you have a disconnected group of islands that can take only one more bridge, that bridge cannot go to a 1. Common instances
-of this pattern include adjacent 1s, which will never connect to each other, and a 1-2-1 pattern, in which the 2 must connect
-to at most one of the 1s.
+of this pattern include adjacent 1s, which will never connect to each other, adjacent 2s, which can't double connect to each other, and a 1-2-1 pattern, in which the 2 must connect to at most one of the 1s.
 
 |ico9| |ico10|
 
@@ -93,6 +92,14 @@ hold shift and mouse over the puzzle to highlight groups of islands.
 
 *If the 3 in the bottom right here connects another bridge to the 2 below it, that group of islands will be unable to connect
 to the rest of the puzzle, as shown in the second image. Thus, the 3 must instead have it's last bridge going left.*
+
+**Group parity**
+
+The sum of the numbers in a board is always an even number, because each bridge contributes 1 to each of its endpoints. Using a partial version of this, you can find the parity of the number of bridges leaving an unsolved group, as below:
+
+|ico15|
+
+5+6+4+2+4 - (2+2+1+2) = 14, which is even, so the only other bridge leaving the group (6 to 3) must also be even. It could be either 0 or 2 bridges (this logic isn't based on connectivity), but we already knew it's at least 1, so it must be 2 bridges.
 
 
 .. |ico1| image:: ../img/hashi/hashi2.png
@@ -137,5 +144,9 @@ to the rest of the puzzle, as shown in the second image. Thus, the 3 must instea
    :class: no-scaled-link
    :width: 30%
 .. |ico14| image:: ../img/hashi/hashi14.png
+   :class: no-scaled-link
+   :width: 30%
+
+.. |ico15| image:: ../img/hashi/hashi15.png
    :class: no-scaled-link
    :width: 30%
