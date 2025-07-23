@@ -34,7 +34,7 @@ Counting with air is pretty simple; if a thermometer has a number ``X`` amount o
 
 .. image:: ../img/thermometers/counting_air.png
 
-Counting with mercury is slightly trickier; in a puzzle of size ``N``x``N``, with a row/column having a total of ``X`` mercury and currently containing ``Y`` air cells, then each thermometer in that row/column can be filled with mercury until there are ``N - X - Y`` empty cells left in that thermometer. If a thermometer's width is less than or equal to this number, then it is not big enough to fill.
+Counting with mercury is slightly trickier; in a puzzle of size ``N`` x ``N``, with a row/column having a total of ``X`` mercury and currently containing ``Y`` air cells, then each thermometer in that row/column can be filled with mercury until there are ``N - X - Y`` empty cells left in that thermometer. If a thermometer's width is less than or equal to this number, then it is not big enough to fill.
 
 .. image:: ../img/thermometers/counting_mercury.png
 
