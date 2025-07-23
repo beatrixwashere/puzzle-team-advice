@@ -25,6 +25,8 @@ Thermometers is similar to Aquarium through the ability to autofill large areas,
 
 .. image:: ../img/thermometers/flooding.png
 
+*mercury floods in, air floods out*
+
 This puzzle is also much harder to make local deductions on due to the nature of many moves to bring attention to other parts of the board, so solving these is much more centered around completing the biggest rows/columns first, and working your way down from there. Since there also aren't any difficulty separations between sizes, solve times can vary more, but the raw difficulty of the puzzle is consistent across all sizes.
 
 Counting
@@ -34,9 +36,13 @@ Counting with air is pretty simple; if a thermometer has a number ``X`` amount o
 
 .. image:: ../img/thermometers/counting_air.png
 
+*air counting logic*
+
 Counting with mercury is slightly trickier; in a puzzle of size ``N`` x ``N``, with a row/column having a total of ``X`` mercury and currently containing ``Y`` air cells, then each thermometer in that row/column can be filled with mercury until there are ``N - X - Y`` empty cells left in that thermometer. If a thermometer's width is less than or equal to this number, then it is not big enough to fill.
 
 .. image:: ../img/thermometers/counting_mercury.png
+
+*mercury counting logic*
 
 Also, empty cells here are cells without mercury or air, so make sure you aren't counting air as an empty space. The main distinction is that while empty cells are still part of the thermometer they belong to, air effectively reduces the size of the thermometer it is in. Thermometers that intersect a row/column are also treated as having a length of 1 cell here, and are only relevant if all the mercury or air in a row/column is filled.
 
@@ -47,12 +53,16 @@ This is typically how you start a puzzle when speedsolving, and is especially us
 
 .. image:: ../img/thermometers/bigmoves.png
 
+*steps for "big moves"*
+
 Curved Puzzles
 --------------
 
 Curved variants have the same approaches as normal puzzles, but the strategies here are slightly harder to apply. While the thermometers are still flooded in the same linear fashion, the path they take can branch out into other rows/columns, or go in and out of the row/column they start in. With air or mercury counting, make sure you identify the order of the cells in a thermometer, since the paths here aren't immediately obvious. Big rows/columns are handled the same, but intersecting thermometers can give that big row/column more than one air cell at once. On that note, keep in mind that intersecting thermometers are able to take up more than one space in a given row/column, so they can be handled as distinct thermometers in counting strategies.
 
 .. image:: ../img/thermometers/curved.png
+
+*order of cells in a curved thermometer*
 
 Even though the deductions on curved puzzles are harder to see, they can also be more powerful, since the thermometers can occupy more different rows/columns, and their sizes aren't as restricted, with at least a couple usually taking long paths.
 
